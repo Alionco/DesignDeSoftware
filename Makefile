@@ -13,7 +13,7 @@ main : % :  $(OBJS) %.o
 	$(CC) $^ -o $(nomePrograma)
 
 # regras de compilação
-%.o: %.c %.h
+%.o: %.cpp %.hpp
 	$(CC) $(parametrosCompilacao) -c -o $@ $<
 	
 clean:

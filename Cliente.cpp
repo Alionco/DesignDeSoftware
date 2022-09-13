@@ -3,7 +3,7 @@
 int Cliente::proxId{0};
 
 Cliente::Cliente(long cpf, std::string nome, std::string email, std::string endereco)
-                :cpf(cpf), nome(nome), email(email), endereco(endereco), id{Cliente::proxId} {
+                :id{Cliente::proxId}, cpf(cpf), nome(nome), email(email), endereco(endereco) {
 
     Cliente::proxId++;
 }
