@@ -9,7 +9,7 @@ class Veiculo {
     public:
 
         Veiculo();
-        Veiculo(int id, std::string status, float preco, DescricaoVeiculo* descricao);
+        Veiculo(std::string status, float preco, DescricaoVeiculo* descricao);
 
         bool verificaAgenda(int data);
         void alterarAgenda(int data);
@@ -17,10 +17,8 @@ class Veiculo {
         void atualizarStatus(std::string status);
 
         int getId();
-        void setId(int id);
 
         std::string getStatus();
-        void setStatus(std::string status);
 
         float getPreco();
         void setPreco(float preco);
@@ -30,6 +28,9 @@ class Veiculo {
 
     protected:
 
+        static int proxId;
+
+        int data;
         int id;
         float preco;
         std::string status;

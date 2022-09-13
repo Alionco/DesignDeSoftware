@@ -8,7 +8,7 @@ class Carro : public Veiculo {
 
     public:
         Carro();
-        Carro(int id, std::string status, float preco, std::string placa, std::string combustivel, DescricaoVeiculo* descricao);
+        Carro(std::string status, float preco, std::string placa, std::string combustivel, DescricaoVeiculo* descricao);
 
         std::string getPlaca();
         void setPlaca(std::string placa);

@@ -8,10 +8,9 @@ class Cliente {
     public:
 
         Cliente();
-        Cliente();
+        Cliente(long cpf, std::string nome, std::string email, std::string endereco);
 
         int getId();
-        void setId(int id);
 
         long getCpf();
         void setCpf(long cpf);       
@@ -27,6 +26,8 @@ class Cliente {
 
 
     private:
+
+        static int proxId;
 
         int id;
         long cpf;

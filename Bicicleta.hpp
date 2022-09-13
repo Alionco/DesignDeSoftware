@@ -8,7 +8,7 @@ class Bicicleta : public Veiculo {
 
     public:
         Bicicleta();
-        Bicicleta(int id, std::string status, float preco, DescricaoVeiculo* descricao);
+        Bicicleta(std::string status, float preco, DescricaoVeiculo* descricao);
 
     private:
 
