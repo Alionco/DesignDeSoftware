@@ -11,11 +11,11 @@ class Contrato {
     public:
 
         Contrato();
-        Contrato(int id, int clienteId, int veiculoId, int data);
+        Contrato(int clienteId, int veiculoId, int tipoVeiculo, int data);
 
         void addSeguro(int seguroId);
         float calcularTotal();
-        bool calcularPagamento();
+        void confirmarPagamento();
         void ajustarLocacao(int data);
         void cobrarMulta(int data);
         void devolverVeiculo();
@@ -29,6 +29,9 @@ class Contrato {
         int getVeiculoId();
         void setVeiculoId(int veiculoId);
 
+        int getTipoVeiculo();
+        void setTipoVeiculo(int tipo);
+
         int getSeguroId();
         void setSeguroId(int seguroId);
 
@@ -36,16 +39,19 @@ class Contrato {
         void setData(int data);
 
         CatalogoVeiculos* getCatalogoVeiculos();
-        void setDescricao(CatalogoVeiculos* catalogoVeiculos);
+        void setCatalogoVeiculos(CatalogoVeiculos* catalogoVeiculos);
 
         CadastroSeguros* getCadastroSeguros();
-        void setDescricao(CadastroSeguros* cadastroSeguros);
+        void setCadastroSeguros(CadastroSeguros* cadastroSeguros);
 
     private:
+
+        static int proxId;
 
         int id;
         int clienteId;
         int veiculoId;
+        int tipoVeiculo;
         int seguroId;
         int data;
         

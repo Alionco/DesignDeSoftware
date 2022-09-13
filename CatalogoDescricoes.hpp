@@ -11,7 +11,7 @@ class CatalogoDescricoes {
 
         CatalogoDescricoes();
 
-        void addDescricao(DescricaoVeiculo* bicicleta);
+        void addDescricao(DescricaoVeiculo* descricao);
         DescricaoVeiculo* findDescricao(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo);
 
 

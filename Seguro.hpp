@@ -6,7 +6,7 @@ class Seguro {
     public:
 
         Seguro();
-        Seguro(int id, int contratoId, float valor);
+        Seguro(int contratoId, float valor);
 
         float calcularSeguro();
  
@@ -21,6 +21,8 @@ class Seguro {
 
 
     private:
+
+        static int proxId;
 
         int id;
         int contratoId;

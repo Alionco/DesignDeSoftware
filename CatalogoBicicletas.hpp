@@ -14,7 +14,7 @@ class CatalogoBicicletas {
 
         void addBicicleta(Bicicleta* bicicleta);
         Bicicleta* findBicicleta(int veiculoId);
-        std::list<Bicicleta*> findBicicletas(DescricaoVeiculo* descricao);
+        std::list<Veiculo*> findBicicletas(DescricaoVeiculo* descricao);
 
     private:
 
