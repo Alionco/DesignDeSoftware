@@ -6,9 +6,11 @@ ControllerPagamento::ControllerPagamento(CadastroContratos* cadastroContratos):c
 
 float ControllerPagamento::calcularTotal(int contratoId) {
     Contrato* c = cadastroContratos->findContrato(contratoId);
+    float t = 0;
     if(c != nullptr) {
-        float t = c->calcularTotal();
+        t = c->calcularTotal();
     }
+    return t;
 }
 void ControllerPagamento::confirmarPagamento(int contratoId) {
 
