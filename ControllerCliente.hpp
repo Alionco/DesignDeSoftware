@@ -9,17 +9,16 @@ class ControllerCliente {
 
     public:
 
-        ControllerCliente();
+        ControllerCliente(CadastroClientes* cadastroClientes);
 
         int cadastrarCliente(long cpf, std::string nome, std::string email, std::string endereco);
-        int findCliente(long cpf);
+        Cliente* findCliente(long cpf);
 
 
     private:
 
         CadastroClientes* cadastroClientes;
     
-
 };
 
 #endif

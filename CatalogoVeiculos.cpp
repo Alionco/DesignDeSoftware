@@ -33,6 +33,20 @@ Veiculo* CatalogoVeiculos::findVeiculo(int tipo, int veiculoId) {
     return v;
 }
 
+DescricaoVeiculo* CatalogoVeiculos::findDescricao(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo) {
+
+    DescricaoVeiculo* d = catalogoDescricoes->findDescricao(ano, cor, categoria, marca, modelo);
+
+    if(d == nullptr) {
+
+        d = new DescricaoVeiculo(ano, cor, categoria, marca, modelo);
+        catalogoDescricoes->addDescricao(d);
+
+    }
+    return d;
+}
+
+
 void CatalogoVeiculos::cadastrarCarro(Carro* carro) {
 
     catalogoCarros->addCarro(carro);

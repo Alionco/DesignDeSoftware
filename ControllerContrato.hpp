@@ -12,9 +12,9 @@ class ControllerContrato {
 
     public:
 
-        ControllerContrato();
+        ControllerContrato(CatalogoVeiculos* catalogoVeiculos, CadastroContratos* cadastroContratos, CadastroSeguros* cadastroSeguros);
 
-        int gerarContrato(int clienteId, int veiculoId, int data);
+        int gerarContrato(int clienteId, int veiculoId, int tipoVeiculo, int data);
         void contratarSeguro(int contratoId);
         std::list<Contrato*> pesquisarContratos(int clienteId);
         void ajustarLocacao(int contratoId, int data);

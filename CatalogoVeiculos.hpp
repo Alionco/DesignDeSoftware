@@ -20,6 +20,7 @@ class CatalogoVeiculos {
         Veiculo* findVeiculo(int tipo, int veiculoId);
         void cadastrarCarro(Carro* carro);
         void cadastrarBicicleta(Bicicleta* bicicleta);
+        DescricaoVeiculo* findDescricao(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo);
 
     private:
 

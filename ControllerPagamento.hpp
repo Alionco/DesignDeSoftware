@@ -9,10 +9,10 @@ class ControllerPagamento{
 
     public:
 
-        ControllerPagamento();
+        ControllerPagamento(CadastroContratos* cadastroContratos);
 
         float calcularTotal(int contratoId);
-        void confirmarPagamento();
+        void confirmarPagamento(int contratoId);
         
 
     private:
