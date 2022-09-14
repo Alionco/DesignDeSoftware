@@ -17,6 +17,8 @@ class CatalogoCarros {
         Carro* findCarro(int veiculoId);
         std::list<Veiculo*> findCarros(std::list<DescricaoVeiculo*> descricao);
 
+        int teste = 999;
+
 
     private:
 

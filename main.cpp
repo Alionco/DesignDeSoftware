@@ -52,8 +52,6 @@ int main() {
     controllerVeiculo.cadastrarCarro(2017, "branco", "luxo", "volks", "fusion", "IJK1234", "gasolina", 350.0);
     controllerVeiculo.cadastrarCarro(2017, "cinza", "economico", "fiat", "toro", "HIJ5555", "diesel", 700.0);
 
-
-
     //ALUGAR CARRO
 
     // pesquisar veiculo, ex: cliente quer carro 2017
@@ -73,30 +71,26 @@ int main() {
     Veiculo* carroEscolhido = (*it);
 
     // verifica se esta disponivel
-    std::cout << "status do carro escolhido: " << (carroEscolhido->verificaAgenda(5)? "disponivel":"alugado") << std::endl;
+    std::cout << "status do carro escolhido: " << carroEscolhido->getStatus() << std::endl;
 
     //cadastra o cliente
     int clienteId = controllerCliente.cadastrarCliente(1111111111,"lucas alionco", "lap19@inf", "rua qlq");
 
     //gera o contrato
     int contratoId = controllerContrato.gerarContrato(clienteId, carroEscolhido->getId(), 0, 5);
-        std::cerr << "contr id" << contratoId << std::endl;
 
     //adiciona seguro
     controllerContrato.contratarSeguro(contratoId);
 
     //calcular valor total da operacao
     float totalOperacao = controllerPagamento.calcularTotal(contratoId);
+    controllerPagamento.confirmarPagamento(contratoId);
     std::cout << "Valor total da operacao: " << totalOperacao << std::endl;
+    std::cout << "status do carro escolhido: " << carroEscolhido->getStatus() << std::endl;
 
-
-
-
-
-
-
-
-
+    //digamos que o cliente devolve o carro no prazo certo
+    controllerContrato.devolverVeiculo(clienteId, carroEscolhido->getId());
+    std::cout << "status do carro escolhido: " << carroEscolhido->getStatus() << std::endl;
 
     return 0;
 }

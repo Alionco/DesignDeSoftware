@@ -11,11 +11,11 @@ ControllerContrato::ControllerContrato(CatalogoVeiculos* catalogoVeiculos, Cadas
 int ControllerContrato::gerarContrato(int clienteId, int veiculoId, int tipoVeiculo, int data) {
 
     Contrato* c{new Contrato{clienteId, veiculoId, tipoVeiculo, data}};
+    c->setCadastroSeguros(this->cadastroSeguros);
+    c->setCatalogoVeiculos(this->catalogoVeiculos);
     cadastroContratos->addContrato(c);
 
     Veiculo* v = catalogoVeiculos->findVeiculo(tipoVeiculo, veiculoId);
-    std::cout << "carro escolhido" << std::endl;
-    v->imprimeVeiculo();
 
     if(v != nullptr) {
         v->alterarAgenda(data);

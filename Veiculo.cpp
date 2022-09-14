@@ -56,5 +56,5 @@ void Veiculo::setDescricao(DescricaoVeiculo* descricao) {
 }
 
 void Veiculo::imprimeVeiculo() {
-    std::cout << "ano: " << this->getDescricao()->getAno() << " cor: " << this->getDescricao()->getCor() << " categoria: " << this->getDescricao()->getCategoria() << " marca: " << this->getDescricao()->getMarca() << " modelo: " << this->getDescricao()->getModelo() << " diaria: " << this->getPreco() << std::endl;
+    std::cout << "ano: " << this->getDescricao()->getAno() << " cor: " << this->getDescricao()->getCor() << " categoria: " << this->getDescricao()->getCategoria() << " marca: " << this->getDescricao()->getMarca() << " modelo: " << this->getDescricao()->getModelo() << " diaria: " << this->getPreco() << " id: " << id << std::endl;
 }

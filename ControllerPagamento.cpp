@@ -1,4 +1,5 @@
 #include "ControllerPagamento.hpp"
+#include <iostream>
 
 ControllerPagamento::ControllerPagamento() {
     
@@ -16,7 +17,7 @@ float ControllerPagamento::calcularTotal(int contratoId) {
     return t;
 }
 void ControllerPagamento::confirmarPagamento(int contratoId) {
-
+    
     Contrato* c = cadastroContratos->findContrato(contratoId);
     if(c != nullptr) {
         c->confirmarPagamento();

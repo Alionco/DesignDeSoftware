@@ -8,6 +8,7 @@ CatalogoCarros::CatalogoCarros(){
 void CatalogoCarros::addCarro(Carro* carro) {
     listaCarros.push_back(carro);
 }
+
 Carro* CatalogoCarros::findCarro(int veiculoId) {
 
     std::list<Carro*>::iterator it;
