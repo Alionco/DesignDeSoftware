@@ -1,5 +1,8 @@
 #include "ControllerPagamento.hpp"
 
+ControllerPagamento::ControllerPagamento() {
+    
+}
 ControllerPagamento::ControllerPagamento(CadastroContratos* cadastroContratos):cadastroContratos(cadastroContratos) {
 
 }

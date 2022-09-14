@@ -2,8 +2,12 @@
 
 int Seguro::proxId{1};
 
+Seguro::Seguro(){
+
+}
+
 Seguro::Seguro(int contratoId, float valor)
-                        :contratoId(contratoId), valor(valor), id{Seguro::proxId} {
+                        :id{Seguro::proxId}, contratoId(contratoId), valor(valor) {
     Seguro::proxId++;
 }
 

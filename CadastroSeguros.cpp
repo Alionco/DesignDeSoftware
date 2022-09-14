@@ -1,5 +1,9 @@
 #include "CadastroSeguros.hpp"
 
+CadastroSeguros::CadastroSeguros() {
+
+}
+
 void CadastroSeguros::addSeguro(Seguro* seguro) {
     listaSeguros.push_back(seguro);
 }

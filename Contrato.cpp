@@ -1,9 +1,15 @@
 #include "Contrato.hpp"
 
+#include <iostream>
+
 int Contrato::proxId{0};
 
+Contrato::Contrato() {
+    
+}
+
 Contrato::Contrato(int clienteId, int veiculoId, int tipoVeiculo, int data)
-                            :clienteId(clienteId), veiculoId(veiculoId), data(data), tipoVeiculo(tipoVeiculo), id{Contrato::proxId} {
+                            :id{Contrato::proxId}, clienteId(clienteId), veiculoId(veiculoId), tipoVeiculo(tipoVeiculo), seguroId{0}, data(data)  {
     Contrato::proxId++;
 }
 
@@ -11,7 +17,9 @@ void Contrato::addSeguro(int seguroId) {
     this->seguroId = seguroId;
 }
 float Contrato::calcularTotal() {
+
     Veiculo* v = catalogoVeiculos->findVeiculo(tipoVeiculo,veiculoId);
+
     float totalVeiculo = v->calcularAluguel();
     float totalSeguro = 0;
     if(seguroId != 0) {

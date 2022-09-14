@@ -1,5 +1,8 @@
 #include "Carro.hpp"
 
+Carro::Carro(){
+    
+}
 
 Carro::Carro(std::string status, float preco, std::string placa, std::string combustivel, DescricaoVeiculo* descricao)
             :Veiculo(status, preco, descricao), placa(placa), combustivel(combustivel) {

@@ -1,5 +1,11 @@
 #include "CadastroClientes.hpp"
 
+#include <iostream>
+
+CadastroClientes::CadastroClientes() {
+    
+}
+
 void CadastroClientes::cadastrarCliente(Cliente* cliente) {
     listaClientes.push_back(cliente);
 }

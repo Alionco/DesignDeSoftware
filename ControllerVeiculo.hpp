@@ -11,6 +11,7 @@ class ControllerVeiculo {
 
     public:
 
+        ControllerVeiculo();
         ControllerVeiculo(CatalogoVeiculos* catalogoVeiculos);
 
         std::list<Veiculo*> pesquisarVeiculos(int tipo, int ano, std::string cor, std::string categoria, std::string marca, std::string modelo);

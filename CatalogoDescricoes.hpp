@@ -12,7 +12,9 @@ class CatalogoDescricoes {
         CatalogoDescricoes();
 
         void addDescricao(DescricaoVeiculo* descricao);
-        DescricaoVeiculo* findDescricao(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo);
+        std::list<DescricaoVeiculo*> findDescricao(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo);
+        DescricaoVeiculo* findDescricaoExata(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo);
+
 
 
     private:

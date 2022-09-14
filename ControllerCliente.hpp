@@ -9,6 +9,7 @@ class ControllerCliente {
 
     public:
 
+        ControllerCliente();
         ControllerCliente(CadastroClientes* cadastroClientes);
 
         int cadastrarCliente(long cpf, std::string nome, std::string email, std::string endereco);

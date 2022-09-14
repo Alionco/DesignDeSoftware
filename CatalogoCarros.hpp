@@ -15,7 +15,7 @@ class CatalogoCarros {
 
         void addCarro(Carro* carro);
         Carro* findCarro(int veiculoId);
-        std::list<Veiculo*> findCarros(DescricaoVeiculo* descricao);
+        std::list<Veiculo*> findCarros(std::list<DescricaoVeiculo*> descricao);
 
 
     private:

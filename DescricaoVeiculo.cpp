@@ -1,8 +1,11 @@
 #include "DescricaoVeiculo.hpp"
 
+DescricaoVeiculo::DescricaoVeiculo() {
+
+}
 
 DescricaoVeiculo::DescricaoVeiculo(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo) 
-                                                        :ano(ano), cor(cor), categoria(categoria), marca(marca), modelo(modelo) {
+                                                        :cor(cor), categoria(categoria), marca(marca), modelo(modelo),ano(ano) {
 }
 
 int DescricaoVeiculo::getAno() {

@@ -1,5 +1,9 @@
 #include "ControllerVeiculo.hpp"
 
+ControllerVeiculo::ControllerVeiculo() {
+
+}
+
 ControllerVeiculo::ControllerVeiculo(CatalogoVeiculos* catalogoVeiculos): catalogoVeiculos(catalogoVeiculos) {
 
 }
@@ -19,17 +23,17 @@ bool ControllerVeiculo::checarDisponibilidade(int tipo, int veiculoId, int data)
 
 int ControllerVeiculo::cadastrarCarro(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo, std::string placa, std::string combustivel, float preco) {
 
-    DescricaoVeiculo* d = catalogoVeiculos->findDescricao(ano, cor, categoria, marca, modelo);
-    Carro c{"disponivel", preco, placa, combustivel, d};
-    catalogoVeiculos->cadastrarCarro(&c);
-    return c.getId();
+    DescricaoVeiculo* d = catalogoVeiculos->findDescricaoExata(ano, cor, categoria, marca, modelo);
+    Carro* c{new Carro{"disponivel", preco, placa, combustivel, d}};
+    catalogoVeiculos->cadastrarCarro(c);
+    return c->getId();
 }
 
 int ControllerVeiculo::cadastrarBicicleta(int ano, std::string cor, std::string categoria, std::string marca, std::string modelo, float preco) {
 
-    DescricaoVeiculo* d = catalogoVeiculos->findDescricao(ano, cor, categoria, marca, modelo);
-    Bicicleta b{"disponivel", preco, d};
-    catalogoVeiculos->cadastrarBicicleta(&b);
-    return b.getId();
+    DescricaoVeiculo* d = catalogoVeiculos->findDescricaoExata(ano, cor, categoria, marca, modelo);
+    Bicicleta* b{new Bicicleta{"disponivel", preco, d}};
+    catalogoVeiculos->cadastrarBicicleta(b);
+    return b->getId();
     
 }

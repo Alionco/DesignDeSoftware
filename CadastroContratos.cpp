@@ -1,5 +1,9 @@
 #include "CadastroContratos.hpp"
 
+CadastroContratos::CadastroContratos() {
+    
+}
+
 void CadastroContratos::addContrato(Contrato* contrato) {
     listaContratos.push_back(contrato);
 }

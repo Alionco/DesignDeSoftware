@@ -26,7 +26,9 @@ class Veiculo {
         DescricaoVeiculo* getDescricao();
         void setDescricao(DescricaoVeiculo* descricao);
 
-    protected:
+        void imprimeVeiculo();
+
+    public:
 
         static int proxId;
 

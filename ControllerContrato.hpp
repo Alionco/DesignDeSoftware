@@ -12,6 +12,7 @@ class ControllerContrato {
 
     public:
 
+        ControllerContrato();
         ControllerContrato(CatalogoVeiculos* catalogoVeiculos, CadastroContratos* cadastroContratos, CadastroSeguros* cadastroSeguros);
 
         int gerarContrato(int clienteId, int veiculoId, int tipoVeiculo, int data);

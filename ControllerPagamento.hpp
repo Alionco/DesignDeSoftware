@@ -9,6 +9,7 @@ class ControllerPagamento{
 
     public:
 
+        ControllerPagamento();
         ControllerPagamento(CadastroContratos* cadastroContratos);
 
         float calcularTotal(int contratoId);

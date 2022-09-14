@@ -2,6 +2,10 @@
 
 int Cliente::proxId{0};
 
+Cliente::Cliente() {
+    
+}
+
 Cliente::Cliente(long cpf, std::string nome, std::string email, std::string endereco)
                 :id{Cliente::proxId}, cpf(cpf), nome(nome), email(email), endereco(endereco) {
 
